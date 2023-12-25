@@ -26,12 +26,16 @@ const upload = multer({ storage })
 const app = express()
 
 // Define a route for file uploads
-app.post(UPLOAD_URL, upload.single('file'), (req, res) => {
+app.all(UPLOAD_URL, upload.single('file'), (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded.')
   }
 
   res.send('File uploaded successfully.')
+})
+
+app.get('/test', (req, res) => {
+  res.send('ok.')
 })
 
 // Start the server
