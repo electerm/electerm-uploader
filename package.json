@@ -1,0 +1,37 @@
+{
+  "name": "electerm-uploader",
+  "version": "1.0.0",
+  "description": "upload electerm files.",
+  "author": "ZHAO Xudong <zxdong@gmail.com>",
+  "license": "MIT",
+  "main": "src/electerm-uploader.js",
+  "scripts": {
+    "start": "node src/electerm-uploader.js",
+    "test": "node bin/test.js",
+    "fix": "./node_modules/.bin/standard --fix",
+    "lint": "./node_modules/.bin/standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electerm/electerm-uploader.git"
+  },
+  "keywords": [
+    "sync",
+    "js",
+    "electerm"
+  ],
+  "bugs": {
+    "url": "https://github.com/electerm/electerm-uploader/issues"
+  },
+  "homepage": "https://github.com/electerm/electerm-uploader#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "multi": "^0.1.3"
+  },
+  "devDependencies": {
+    "form-data": "^4.0.0",
+    "standard": "^17.1.0"
+  }
+}
