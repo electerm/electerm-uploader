@@ -20,7 +20,12 @@ const storage = multer.diskStorage({
 })
 
 // Create an instance of the multer middleware
-const upload = multer({ storage })
+const upload = multer({
+  storage,
+  limits: {
+    fileSize: 400 * 1024 * 1024
+  }
+})
 
 // Create an Express app
 const app = express()
