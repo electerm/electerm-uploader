@@ -14,7 +14,7 @@ async function uploadFile (filePath) {
   // try {
   const fileStream = fs.createReadStream(filePath)
   const formData = new FormData()
-  formData.append('file', fileStream, TEST_UPLOAD_FILE_PROD)
+  formData.append('file', fileStream, TEST_UPLOAD_FILE_PROD.split('/').pop())
   const request = https.request({
     method: 'post',
     host: HOST_PROD,
